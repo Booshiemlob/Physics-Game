@@ -17,18 +17,26 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
 
+        
+
 
             //This checks to see if the left or right arrow key is pressed to then move them in the respective direction
-            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
             {
                 Vector3 position = this.transform.position;
-                position.x--;
+                if (position.x - 1 > -42)
+                {
+                    position.x--;
+                }
                 this.transform.position = position;
             }
-            if (Input.GetKeyDown(KeyCode.RightArrow))
+            if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
             {
                 Vector3 position = this.transform.position;
-                position.x++;
+                if (position.x - 1 < 20)
+                {
+                    position.x++;
+                }
                 this.transform.position = position;
             }
     
