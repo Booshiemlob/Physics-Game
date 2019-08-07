@@ -14,6 +14,7 @@ public class BackToMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Checking if the space key is pressed to then go back to the main menu scene
         if (Input.GetKeyDown(KeyCode.Space))
         {
             SceneManager.LoadScene(0);

@@ -19,6 +19,7 @@ public class YouWin : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
+        //If the Player touches this object the "you win" scene is loaded
         if (collision.gameObject.tag == "Player")
         {
             SceneManager.LoadScene(2);

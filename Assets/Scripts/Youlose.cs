@@ -19,6 +19,7 @@ public class Youlose : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
+        //If the Player touches this object the "you lose" scene is loaded
         if (collision.gameObject.tag == "Player")
         {
             SceneManager.LoadScene(3);

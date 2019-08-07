@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //By default gravity is turned off for the object
         Physics.gravity = Vector3.zero;
     }
 
@@ -17,7 +18,7 @@ public class PlayerController : MonoBehaviour
     {
 
 
-
+            //This checks to see if the left or right arrow key is pressed to then move them in the respective direction
             if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
                 Vector3 position = this.transform.position;
@@ -33,6 +34,7 @@ public class PlayerController : MonoBehaviour
     
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            //When space is pressed gravity is turned on
             Physics.gravity = Vector3.down*9.81f;
             
         }
